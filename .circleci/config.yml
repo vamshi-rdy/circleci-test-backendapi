@@ -4,6 +4,14 @@ jobs:
   deploy:
     docker:
       - image: circleci/python:3.8
+    parameters:
+      s3-bucket-name:
+        type: string
+        default: test-api-circleci
+      stack-name:
+        type: string
+        default: testapistack
+      
     steps:
       - checkout
       - run:
@@ -25,13 +33,11 @@ workflows:
   version: 2
   deploy:
     jobs:
-      - deploy
-
-parameters:
-  s3-bucket-name:
-    type: string
-    default: test-api-circleci
-  stack-name:
-    type: string
-    default: testapistack                                
+      - deploy:
+          s3-bucket-name: $testapibucket
+          stack-name: $testapistackname
+          filters:
+            branches:
+              only: main
+                                
               
