@@ -39,7 +39,7 @@ workflows:
     jobs:
       - deploy:
           name: deploy-restapi
-          context: aws-credentials-dev
+          context: aws-credential-dev
           s3-bucket-name: $testapibucket
           stack-name: $testapistackname
           filters:
