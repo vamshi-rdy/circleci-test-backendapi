@@ -9,6 +9,11 @@ Resources:
     Type: 'AWS::ApiGateway::RestApi'
     Properties:
       Name: ReqValidatorsSample
+  RestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Description: My Rest API
+      Name: MyApi    
   RequestBodyModelId:
     Type: 'AWS::ApiGateway::Model'
     Properties:
@@ -43,7 +48,7 @@ Resources:
                   RequestBodyModelId: !Ref RequestBodyModelId
             price: 
               type: number
-              minimum: 25
+              minimum: 26
               maximum: 500
             name:
               type: string
