@@ -32,7 +32,9 @@ jobs:
           name: Package and Deploy with SAM
           command: |
             sam package --template-file restapitest.yml --output-template-file packaged.yml --s3-bucket <<parameters.s3-bucket-name>>
+            echo "S3 Bucket Name: <<parameters.s3-bucket-name>>"
             sam deploy --template-file packaged.yml --stack-name <<parameters.stack-name>> --capabilities CAPABILITY_IAM
+            echo "S3 Stack Name: <<parameters.stack-name>>"
 
 workflows:
   version: 2
