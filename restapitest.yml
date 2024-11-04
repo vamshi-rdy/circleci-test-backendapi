@@ -125,7 +125,7 @@ Resources:
         S3Key: "packaged.yml"
       Handler: test.lambda_handler
       Role: !GetAtt LambdaExecutionRole.Arn
-      Runtime: python3.6
+      Runtime: python3.12
       # Tags:
       # -
       #   Key: "Documentation"
