@@ -122,7 +122,7 @@ Resources:
     Properties:
       Code:
         S3Bucket: "test-api-circleci2"
-        S3Key: "packaged.yml"
+        S3Key: "test-api-circleci2/packaged.yml"
       Handler: test.lambda_handler
       Role: !GetAtt LambdaExecutionRole.Arn
       Runtime: python3.12
