@@ -121,7 +121,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Code:
-        S3Bucket: "test-api-circleci"
+        S3Bucket: "test-api-circleci2"
         S3Key: "packaged.yml"
       Handler: test.lambda_handler
       Role: !GetAtt LambdaExecutionRole.Arn
