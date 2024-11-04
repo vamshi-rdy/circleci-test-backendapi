@@ -160,7 +160,7 @@ Resources:
             - s3:GetObject
             Resource: 
               - arn:aws:logs:*:*:*
-              - arn:aws:s3:::test-api-circleci/*
+              - arn:aws:s3:::test-api-circleci2/*
             
 
   # Permission for API Gateway endpoint to call TestLambdaFunction
