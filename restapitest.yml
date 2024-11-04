@@ -157,7 +157,11 @@ Resources:
           - Effect: "Allow"
             Action:
             - logs:*
-            Resource: arn:aws:logs:*:*:*
+            - s3:GetObject
+            Resource: 
+              - arn:aws:logs:*:*:*
+              - arn:aws:s3:::test-api-circleci/*
+            
 
   # Permission for API Gateway endpoint to call TestLambdaFunction
   LambdaInvokePermission:
